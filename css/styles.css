@@ -684,7 +684,16 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     left: 0;
     background-color: rgba(46, 47, 66, 0.40);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 
+}
+
+.is-open { 
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 
@@ -697,14 +706,12 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scaleY(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-50%, -50%);
     padding: 72px 24px 24px 24px;
+    
 
 }
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scaleY(5);
-}
+ 
 
 .modal-close-btn { 
     border: none;
@@ -738,12 +745,8 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
 
-}
+
 
 .modal-title {
 font-size: 16px;
